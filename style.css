@@ -3,11 +3,11 @@
 /* ---Variables--- */
 :root{
     --color-1: #bdc3c7;
-    --color-2: #8e44ad;
+    --color-2: #444bad;
     --color-3: #ecf0f1;
-    --color-4: #d896f5;
-    --color-5: #9b59b6;
-    --color-6: #420858;
+    --color-4: #9698f5;
+    --color-5: #595bb6;
+    --color-6: #140858;
 }
 
 /* ---Reset--- */
@@ -16,7 +16,7 @@
     padding: 0;
     font-family: 'Roboto';
     box-sizing: border-box;
-    /* border-radius: 10px; */
+    border-radius: 10px;
 }
 
 /* ---Common--- */
@@ -51,7 +51,7 @@ img{
 
 .wrapper{
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 10px;
 }
 
 /* ---Navigation--- */
@@ -111,7 +111,7 @@ img{
 .showcase{
     grid-area: showcase;
     padding: 50px;
-    background-image: url(https://images.pexels.com/photos/2081166/pexels-photo-2081166.jpeg);
+    background-image: url(https://www.electez.com/images/webhosting.png);
     background-size: cover;
     display: grid;
     grid-gap: 30px;
@@ -138,13 +138,21 @@ img{
 .showcase .btn{
     display: inline-block;
     margin-bottom: 20px;
+    border: 1px solid var(--color-3);
 }
 
 .showcase .btn:hover{
     background-color: var(--color-6);
 }
 
-/* To Boxes */
+/* Top Boxes */
+.top-box{
+    padding: 50px 40px;
+    background-color: var(--color-1);
+    color: var(--color-6);
+    transition: all 0.3s ease-in;
+}
+
 .top-boxa{
     grid-area: top-boxa;
 }
@@ -161,13 +169,6 @@ img{
     grid-area: top-boxd;
 }
 
-.top-box{
-    padding: 50px 40px;
-    background-color: var(--color-1);
-    color: var(--color-6);
-    transition: all 0.3s ease-in;
-}
-
 .top-box:hover{
     background-color: var(--color-4);
 }
@@ -179,3 +180,32 @@ img{
 .top-box .btn:hover{
     background-color: var(--color-6);
 }
+
+/* ---Services--- */
+.service{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.service .box{
+    background-color: var(--color-1);
+    text-align: center;
+    padding: 30px 10px;
+    color: var(--color-6);
+    transition: all 0.3s ease-in;
+}
+
+.service .box h3{
+    margin: 10px 0;
+}
+
+.service .box i{
+    font-size: 3rem;
+}
+
+.service .box:hover{
+    background-color: var(--color-4);
+}
+
+
