@@ -8,6 +8,8 @@
     --color-4: #9698f5;
     --color-5: #595bb6;
     --color-6: #140858;
+    --color-7: #6a58ce;
+    --color-8: #797ad6;
 }
 
 /* ---Reset--- */
@@ -29,7 +31,7 @@ body{
     margin: 30px 50px;
     width: 80%;
     margin: 0 auto;
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 a{
@@ -51,18 +53,19 @@ img{
 
 .wrapper{
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 0px;
 }
 
 .wrapper section{
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    border-radius: 0px;
 }
 
 /* ---Navigation--- */
 .main-nav{
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-gap: 2px;
+    grid-gap: 0px;
 }
 
 /* Logo */
@@ -72,6 +75,7 @@ img{
     background-color: var(--color-2);
     padding: 12px;
     text-align: center;
+    border-radius: 0px;
 }
 
 .main-nav .logo h3 span{
@@ -83,29 +87,29 @@ img{
 /* Menu Items */
 .main-nav ul{
     display: grid;
-    grid-gap: 2px;
+    grid-gap: 0px;
     padding: 0;
     list-style: none;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .main-nav a{
-    background-color: var(--color-1);
+    background-color: var(--color-2);
     display: block;
     padding: 12px;
-    color: var(--color-6);
+    color: var(--color-3);
     font-size: 1rem;
+    border-radius: 0px;
 }
 
 .main-nav a:hover{
-    background-color: var(--color-2);
-    color: var(--color-3);
+    background-color: var(--color-6);
 }
 
 /* ---Top Container--- */
 .top-container{
     display: grid;
-    grid-gap: 2px;
+    grid-gap: 0px;
     grid-template-areas: 
         'showcase top-boxa top-boxb'
         'showcase top-boxc top-boxd';
@@ -121,6 +125,7 @@ img{
     grid-gap: 30px;
     grid-template-rows: 0.1fr 0.2fr 0.2fr;
     padding-top: 80px;
+    border-radius: 0px;
 }
 
 .showcase p{
@@ -154,27 +159,32 @@ img{
     padding: 50px 40px;
     background-color: var(--color-1);
     color: var(--color-6);
+    border-radius: 0px;
     transition: all 0.3s ease-in;
 }
 
 .top-boxa{
     grid-area: top-boxa;
+    background-color: var(--color-1);
 }
 
 .top-boxb{
     grid-area: top-boxb;
+    background-color: var(--color-3);
 }
 
 .top-boxc{
     grid-area: top-boxc;
+    background-color: var(--color-3);
 }
 
 .top-boxd{
     grid-area: top-boxd;
+    background-color: var(--color-1);
 }
 
 .top-box:hover{
-    background-color: var(--color-4);
+    background-color: var(--color-8);
 }
 
 .top-box p{
@@ -190,10 +200,12 @@ img{
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(4, 1fr);
+    background-color: var(--color-2);
+    padding: 50px 30px;
 }
 
 .service .box{
-    background-color: var(--color-1);
+    background-color: var(--color-3);
     text-align: center;
     padding: 30px 10px;
     color: var(--color-6);
@@ -214,7 +226,6 @@ img{
 
 /* ---About--- */
 .about{
-    background-color: var(--color-1);
     color: var(--color-6);
     display: grid;
     grid-gap: 30px;
@@ -252,6 +263,8 @@ img{
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr;
+    background-color: var(--color-2);
+    padding: 50px 30px;
 }
 
 .review .row{
@@ -263,16 +276,18 @@ img{
 }
 
 .review .row .client{
-    background-color: var(--color-1);
+    background-color: var(--color-3);
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 10px;
     grid-template-columns: 1fr 3fr;
+    border-radius: 10px;
 }
 
 .review .row .client p{
     margin: auto;
     padding: 10px 20px;
     background-color: var(--color-4);
+    color: var(--color-6);
 }
 
 .review .row .client p i{
@@ -281,7 +296,7 @@ img{
 
 .review .row img{
     max-width: 150px;
-    max-height: 150px;
+    min-height: 150px;
     height: 100%;
 }
 
