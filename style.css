@@ -358,4 +358,61 @@ img{
     background-color: var(--color-6);
 }
 
+/* ---Footer--- */
+footer{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    padding-top: 50px;
+    background-color: var(--color-2);
+}
+
+/* Upper */
+footer .upper{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 0px;
+}
+
+footer .upper .fbox ul{
+    text-align: left;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    padding: 25px;
+}
+
+footer .upper .fbc{
+    text-align: center;
+    padding: 25px;
+}
+
+footer .upper .fbc a{
+    margin: 0 10px;
+}
+
+footer .upper .fbc a i{
+    color: var(--color-3);
+    font-size: 1.7rem;
+    transition: all 0.3s ease-in;
+}
+
+footer .upper .fbc a i:hover{
+    color: var(--color-6);
+}
+
+/* Lower */
+footer .lower{
+    background-color: var(--color-3);
+    border-radius: 0px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    color: var(--color-6);
+}
+
 
