@@ -415,4 +415,57 @@ footer .lower{
     color: var(--color-6);
 }
 
+/* ---Responsive--- */
+@media(max-width: 1150px){
+    /* ---Navigation--- */
+    .main-nav{
+        grid-template-columns: 1fr;
+    }
 
+    /* ---Top Container--- */
+    .top-container{
+        grid-template-areas: 
+        'showcase showcase'
+        'top-boxa top-boxb'
+        'top-boxc top-boxd';
+    }
+
+    /* ---Services--- */
+    .service{
+        grid-template-columns: 1fr;
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    /* ---About--- */
+    .about{
+        grid-template-columns: 1fr;
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    .about img{
+        margin: 0 auto;
+    }
+
+    /* ---Review--- */
+    .review{
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    .review .row{
+        grid-template-columns: 1fr;
+    }
+
+    /* ---Footer--- */
+    footer .upper{
+        grid-template-columns: 1fr;
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    footer .upper .fbox ul{
+        text-align: center;
+    }
+}
