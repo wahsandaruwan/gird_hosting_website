@@ -361,9 +361,8 @@ img{
 /* ---Footer--- */
 footer{
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 0px;
     grid-template-columns: 1fr;
-    padding-top: 50px;
     background-color: var(--color-2);
 }
 
@@ -372,6 +371,7 @@ footer .upper{
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
+    padding: 50px 0px;
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
