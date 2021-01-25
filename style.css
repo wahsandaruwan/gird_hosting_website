@@ -34,9 +34,15 @@ body{
     /* padding: 15px; */
 }
 
+ul{
+    list-style: none;
+}
+
 a{
     text-decoration: none;
     text-align: center;
+    color: var(--color-3);
+    cursor: pointer;
     transition: all 0.3s ease-in;
 }
 
@@ -45,6 +51,7 @@ a{
     color: var(--color-3);
     padding: 10px 30px;
     border: 0;
+    cursor: pointer;
 }
 
 img{
@@ -56,7 +63,8 @@ img{
     grid-gap: 0px;
 }
 
-.wrapper section{
+.wrapper section,
+.wrapper footer{
     /* margin-bottom: 30px; */
     border-radius: 0px;
 }
@@ -89,7 +97,6 @@ img{
     display: grid;
     grid-gap: 0px;
     padding: 0;
-    list-style: none;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
@@ -230,7 +237,7 @@ img{
     display: grid;
     grid-gap: 30px;
     grid-template-columns: 1fr 3fr;
-    padding: 40px;
+    padding: 50px 30px;
 }
 
 /* Image */
@@ -272,6 +279,7 @@ img{
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -281,6 +289,7 @@ img{
     grid-gap: 10px;
     grid-template-columns: 1fr 3fr;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .review .row .client p{
@@ -298,26 +307,55 @@ img{
     max-width: 150px;
     min-height: 150px;
     height: 100%;
+    border-radius: 0px;
 }
 
-/* ---Responsive--- */
-@media(max-width: 1150px){
-    .main-nav{
-        grid-template-columns: 1fr;
-    }
-
-    .top-container{
-        grid-template-areas: 
-        'showcase showcase'
-        'top-boxa top-boxb'
-        'top-boxc top-boxd';
-    }
-
-    .about{
-        grid-template-columns: 1fr;
-    }
-
-    .about img{
-        margin: 0 auto;
-    }
+/* ---Contact--- */
+.contact{
+    padding: 50px 30px;
 }
+
+.contact form{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact form input{
+    height: 50px;
+    padding: 0 30px;
+    color: var(--color-6);
+    border: 3px var(--color-2) solid;
+    font-size: 1rem;
+    transition: all 0.3s ease-in;
+}
+
+.contact form textarea{
+    resize: none;
+    padding: 20px 30px;
+    border: 3px var(--color-2) solid;
+    font-size: 1rem;
+    transition: all 0.3s ease-in;
+}
+
+.contact form input::placeholder,
+.contact form textarea::placeholder{
+    color: var(--color-2);
+}
+
+.contact form button{
+    height: 50px;
+    font-size: 1rem;
+    color: var(--color-3);
+    background-color: var(--color-2);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.contact form button:hover{
+    background-color: var(--color-6);
+}
+
+
