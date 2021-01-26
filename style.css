@@ -60,6 +60,7 @@ img{
 .wrapper{
     display: grid;
     grid-gap: 0px;
+    grid-template-columns: 1fr;
 }
 
 .wrapper section,
@@ -129,7 +130,6 @@ img{
     background-size: cover;
     display: grid;
     grid-gap: 30px;
-    grid-template-rows: 0.1fr 0.2fr 0.2fr;
     padding-top: 80px;
     border-radius: 0px;
 }
@@ -504,7 +504,7 @@ footer .lower p{
 
     /* ---Footer--- */
     footer .upper .fbc a i{
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 }
 
