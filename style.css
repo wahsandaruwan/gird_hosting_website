@@ -28,7 +28,6 @@ html{
 
 body{
     background-color: var(--color-3);
-    margin: 30px 50px;
     width: 80%;
     margin: 0 auto;
     /* padding: 15px; */
@@ -259,6 +258,7 @@ img{
 .about div ul{
     margin-bottom: 30px;
     margin-left: 20px;
+    list-style: disc;
 }
 
 .about div .btn:hover{
@@ -303,7 +303,7 @@ img{
     font-size: 0.8rem;
 }
 
-.review .row img{
+.review .row .client img{
     max-width: 150px;
     min-height: 150px;
     height: 100%;
@@ -478,5 +478,33 @@ footer .lower p{
     
 }
 
+@media(max-width: 550px){
+    /* ---Body--- */
+    body{
+        width: 100%;
+    }
 
+    /* ---Navigation--- */
+    .main-nav ul{
+        grid-template-columns: 1fr;
+    }
+
+    /* ---Review--- */
+    .review .row{
+        max-width: 180px;
+    }
+
+    .review .row .client{
+        grid-template-columns: 1fr;
+    }
+
+    .review .row .client img{
+        max-width: 180px;
+    }
+
+    /* ---Footer--- */
+    footer .upper .fbc a i{
+        font-size: 1.2rem;
+    }
+}
 
