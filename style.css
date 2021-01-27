@@ -97,7 +97,7 @@ img{
     display: grid;
     grid-gap: 0px;
     padding: 0;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .main-nav a{
@@ -320,6 +320,7 @@ img{
     grid-gap: 20px;
     grid-template-columns: 1fr;
     max-width: 700px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -374,7 +375,7 @@ footer .upper{
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    padding: 50px 0px;
+    padding: 50px 30px;
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
@@ -386,7 +387,7 @@ footer .upper .fbox ul{
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr;
-    padding: 25px;
+    padding: 25px 0px;
 }
 
 footer .upper .fbc{
@@ -418,6 +419,7 @@ footer .lower{
 footer .lower p{
     text-align: center;
     color: var(--color-6);
+    font-size: 0.9rem;
 }
 
 /* ---Responsive--- */
@@ -464,12 +466,13 @@ footer .lower p{
 
 
 @media(max-width: 750px){
-    /* ---Services, About & Review--- */
+    /* ---Services, About, Review & Contact--- */
     .service,
     .about,
-    .review{
-        padding-left: 30px;
-        padding-right: 30px;
+    .review,
+    .contact{
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     footer .upper .fbc a{
@@ -487,6 +490,16 @@ footer .lower p{
     /* ---Navigation--- */
     .main-nav ul{
         grid-template-columns: 1fr;
+    }
+
+    .top-container{
+        grid-template-areas: 
+        'showcase'
+        'showcase'
+        'top-boxa'
+        'top-boxb'
+        'top-boxc'
+        'top-boxd';
     }
 
     /* ---Review--- */
@@ -507,4 +520,5 @@ footer .lower p{
         font-size: 1.5rem;
     }
 }
+
 
