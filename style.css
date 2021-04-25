@@ -3,13 +3,11 @@
 /* ---Variables--- */
 :root{
     --color-1: #bdc3c7;
-    --color-2: #444bad;
+    --color-2: #000000;
     --color-3: #ecf0f1;
-    --color-4: #9698f5;
-    --color-5: #595bb6;
-    --color-6: #140858;
-    --color-7: #6a58ce;
-    --color-8: #797ad6;
+    --color-4: #f54343;
+    --color-5: #ffffff;
+    --color-6: #cf1818;
 }
 
 /* ---Reset--- */
@@ -23,11 +21,11 @@
 
 /* ---Common--- */
 html{
-    background-color: var(--color-4);
+    background-color: var(--color-5);
 }
 
 body{
-    background-color: var(--color-3);
+    background-color: var(--color-1);
     width: 80%;
     margin: 0 auto;
     /* padding: 15px; */
@@ -113,6 +111,24 @@ img{
     background-color: var(--color-6);
 }
 
+/* Mobile Menu */
+#menu-show{
+    display: none;
+}
+
+.main-nav label{
+    position: absolute;
+    top: 25px;
+    right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.main-nav label i{
+    color: var(--color-5);
+    font-size: 1.5rem;
+}
+
 /* ---Top Container--- */
 .top-container{
     display: grid;
@@ -126,8 +142,10 @@ img{
 .showcase{
     grid-area: showcase;
     padding: 50px;
-    background-image: url(https://www.electez.com/images/webhosting.png);
+    background-image: url(https://images.pexels.com/photos/3888151/pexels-photo-3888151.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260);
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     display: grid;
     grid-gap: 30px;
     padding-top: 80px;
@@ -137,7 +155,7 @@ img{
 .showcase p{
     padding: 20px;
     background-color: var(--color-1);
-    color: var(--color-6);
+    color: var(--color-2);
     line-height: 25px;
 }
 
@@ -145,7 +163,7 @@ img{
     max-width: 400px;
     padding: 20px 30px;
     background-color: var(--color-1);
-    color: var(--color-6);
+    color: var(--color-2);
     text-align: center;
     font-size: 2rem;
 }
@@ -164,7 +182,7 @@ img{
 .top-box{
     padding: 50px 40px;
     background-color: var(--color-1);
-    color: var(--color-6);
+    color: var(--color-2);
     border-radius: 0px;
     transition: all 0.3s ease-in;
 }
@@ -190,7 +208,7 @@ img{
 }
 
 .top-box:hover{
-    background-color: var(--color-8);
+    background-color: var(--color-4);
 }
 
 .top-box p{
@@ -214,7 +232,7 @@ img{
     background-color: var(--color-3);
     text-align: center;
     padding: 30px 10px;
-    color: var(--color-6);
+    color: var(--color-2);
     transition: all 0.3s ease-in;
 }
 
@@ -232,7 +250,7 @@ img{
 
 /* ---About--- */
 .about{
-    color: var(--color-6);
+    color: var(--color-2);
     display: grid;
     grid-gap: 30px;
     grid-template-columns: 1fr 3fr;
@@ -241,13 +259,13 @@ img{
 
 /* Image */
 .about img{
-    background-color: var(--color-5);
+    background-color: var(--color-2);
     padding: 20px;
 }
 
 /* Info */
 .about div{
-    background-color: var(--color-4);
+    background-color: var(--color-3);
     padding: 30px 20px;
 }
 
@@ -295,8 +313,8 @@ img{
 .review .row .client p{
     margin: auto;
     padding: 10px 20px;
-    background-color: var(--color-4);
-    color: var(--color-6);
+    background-color: var(--color-2);
+    color: var(--color-3);
 }
 
 .review .row .client p i{
@@ -390,6 +408,10 @@ footer .upper .fbox ul{
     padding: 25px 0px;
 }
 
+footer .upper .fbox ul a:hover{
+    color: var(--color-4);
+}
+
 footer .upper .fbc{
     text-align: center;
     padding: 25px;
@@ -406,19 +428,19 @@ footer .upper .fbc a i{
 }
 
 footer .upper .fbc a i:hover{
-    color: var(--color-6);
+    color: var(--color-4);
 }
 
 /* Lower */
 footer .lower{
-    background-color: var(--color-3);
+    background-color: var(--color-1);
     border-radius: 0px;
     padding: 40px 20px;
 }
 
 footer .lower p{
     text-align: center;
-    color: var(--color-6);
+    color: var(--color-2);
     font-size: 0.9rem;
 }
 
@@ -490,6 +512,14 @@ footer .lower p{
     /* ---Navigation--- */
     .main-nav ul{
         grid-template-columns: 1fr;
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+        transition: all 0.3s ease-in;
+    }
+
+    .main-nav label:nth-child(2){
+        display: block;
     }
 
     .top-container{
@@ -511,6 +541,10 @@ footer .lower p{
         grid-template-columns: 1fr;
     }
 
+    .review .row .client p{  
+        margin: 5px;
+    }
+
     .review .row .client img{
         max-width: 180px;
     }
@@ -518,6 +552,21 @@ footer .lower p{
     /* ---Footer--- */
     footer .upper .fbc a i{
         font-size: 1.5rem;
+    }
+
+    /* ---Responsive Menu--- */
+    #menu-show:checked ~ ul{
+        visibility: visible;
+        opacity: 1;
+        max-height: max-content;
+    }
+
+    #menu-show:checked ~ label:nth-child(2){
+        display: none;
+    }
+
+    #menu-show:checked ~ label:nth-child(3){
+        display: block;
     }
 }
 
